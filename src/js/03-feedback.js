@@ -15,12 +15,12 @@ function onFormInput() {
   };
 
   localStorage.setItem('feedback-form-state', JSON.stringify(saveData));
-  console.log(saveData);
 }
 
 function onFormSubmit(evt) {
   evt.preventDefault();
   evt.currentTarget.reset();
+  console.log(localStorage.getItem('feedback-form-state'));
   localStorage.removeItem('feedback-form-state');
 }
 
