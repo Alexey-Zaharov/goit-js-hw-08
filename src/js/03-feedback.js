@@ -20,7 +20,9 @@ function onFormInput() {
 function onFormSubmit(evt) {
   evt.preventDefault();
   evt.currentTarget.reset();
-  console.log(localStorage.getItem('feedback-form-state'));
+  if (localStorage.getItem('feedback-form-state')) {
+    console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
+  }
   localStorage.removeItem('feedback-form-state');
 }
 
